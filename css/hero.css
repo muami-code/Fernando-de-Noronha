@@ -1,0 +1,71 @@
+.hero_section {
+  display: flex;
+  width: 100%;
+  height: 425px;
+  background: url(../image/home/portada.jpg);
+  color: var(--blanco);
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero_title {
+  width: 100%;
+  height: 56px;
+
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+}
+
+.hero_text {
+  width: 100%;
+  margin-top: 5%;
+  grid-area: text;
+
+  font-family: 'Work Sans';
+
+  text-align: left;
+}
+
+/*======= tablets =======*/
+@media (min-width: 40px) {
+  .hero_title {
+    margin-bottom: 5rem;
+    padding: 2rem;
+    font-size: 52px;
+  }
+
+  .hero_text {
+    padding: 2rem;
+    font-size: calc(10px + 1vw);
+  }
+}
+
+/*======= Desktop =======*/
+@media (min-width: 56rem) {
+  .hero_title {
+    width: 100%;
+    height: 56px;
+
+    margin-bottom: 0;
+    padding-left: 145px;
+
+    font-family: 'Indie Flower';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 100%;
+  }
+
+  .hero_text {
+    width: 60%;
+    padding-left: 145px;
+
+    font-family: 'Work Sans';
+    font-size: 16px;
+    text-align: left;
+  }
+}

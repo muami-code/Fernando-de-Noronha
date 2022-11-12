@@ -1,0 +1,159 @@
+.btn {
+  display: flex;
+  margin: auto;
+  padding: 0 40px;
+  background-color: var(--turquesa);
+  border: none;
+  border-radius: 4px;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn:hover {
+  background-color: var(--turquesa-opaco);
+}
+
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  left: 0;
+  right: 0;
+  top: 80px;
+  bottom: 100%;
+  width: auto;
+  height: auto;
+  background-color: var(--negro);
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  text-transform: uppercase;
+}
+
+.menu .menu_links {
+  position: relative;
+  font-size: 20px;
+}
+
+/* efecto sobre links */
+.menu .menu_links::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu .menu_links:hover::before {
+  transform: scaleX(1);
+}
+
+.menu[data-animation="to-left"] .menu_links::before {
+  transform-origin: right;
+}
+
+.menu[data-animation="center"] .menu_links::before {
+  transform-origin: center;
+}
+
+/* desplegamos el menu */
+.navbar :checked~.menu {
+  bottom: 0;
+}
+
+/* ocultamos checkbox */
+#nav-toggle {
+  position: absolute;
+  opacity: 0;
+  top: -100px;
+}
+
+/* Icono menu */
+.navbar .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: var(--blanco);
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+.navbar .icon-burger {
+  display: block;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav :checked~.icon-burger .line:nth-child(1) {
+  transform: translateY(10px) rotate(225deg);
+}
+
+nav :checked~.icon-burger .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-225deg);
+}
+
+nav :checked~.icon-burger .line:nth-child(2) {
+  opacity: 0;
+}
+
+/*======= Desktop ======*/
+@media (min-width: 56rem) {
+  .navbar {
+    display: flex;
+  }
+
+  .wrapper-nav {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .btn {
+    padding: 0 40px;
+  }
+
+  .navbar .icon-burger {
+    display: none;
+  }
+
+  .navbar .menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+
+    width: 100%;
+    margin: auto;
+
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: none;
+    transition: none;
+  }
+
+  .navbar .menu li {
+    padding-left: 20px;
+  }
+
+  .navbar .menu a {
+    font-size: 16px;
+  }
+}

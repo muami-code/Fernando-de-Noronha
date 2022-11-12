@@ -1,0 +1,86 @@
+:root {
+  --blanco: #FFFFFF;
+  --negro: #0C1919;
+  --gris-base: #303030;
+  --amarillo: #E1A142;
+  --turquesa: #4E7777;
+  --turquesa-opaco: #88AAAA;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--blanco);
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* centrar el logo */
+  position: fixed;
+  width: 100%;
+  
+  grid-area: header;
+  
+  background-color: var(--negro);
+  z-index: 1; /* para que no se posicione debajo mask_group*/
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.main {
+  grid-area: main;
+  background-color: var(--blanco);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--turquesa);
+}
+
+.body_container {
+  display: grid;
+  grid-template:
+    "header" 80px
+    "main" auto
+    "footer" 120px;
+}
+
+/*======= Desktop =======*/
+@media (min-width: 56rem) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*==== Para futuras modificaciones ====*/
+  /* .body_container { 
+    grid-template:
+      "header  header header" 80px
+      "sidebar main   aside" auto
+      "footer  footer footer" 120px;
+  } */
+}

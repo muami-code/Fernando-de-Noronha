@@ -1,0 +1,128 @@
+.activitie_image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+.activitie_btn {
+  padding: 0.8rem;
+  max-width: 100%;
+  height: 34px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 10px 20px -9px var(--turquesa);
+
+  text-align: left;
+
+  background-color: var(--turquesa);
+  cursor: pointer;
+}
+
+.activitie_btn:hover {
+  background-color: var(--turquesa-opaco);
+}
+
+.activities {
+  display: flex;
+  margin-bottom: 45px;
+
+  list-style: none;
+  overflow: auto;
+}
+
+.activities::-webkit-scrollbar {
+  display: none;
+}
+
+.activities_item {
+  display: grid;
+  flex: 0 0 auto;
+
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.activitie {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 0.25rem;
+
+  background-color: white;
+  overflow: hidden;
+}
+
+.activitie_content {
+  padding: 1rem;
+  background-color: var(--blanco);
+}
+
+.activitie_title {
+  color: var(--turquesa);
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.activitie_text {
+  width: 100%;
+  height: 110px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(11px + 0.5vw);
+  line-height: 140%;
+
+  color: #303030;
+}
+
+/*======= Tablets ======*/
+@media (min-width: 40rem) {
+  .activities_item {
+    width: 50%;
+  }
+}
+
+/*======= Desktop =======*/
+@media (min-width: 56rem) {
+  .activitie_image {
+    max-width: 100%;
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  .activities_item {
+    width: 33.3333%;
+  }
+
+  .activities {
+    justify-content: center;
+    
+    width: auto;
+    margin: -60px 140px 0;
+    
+    border-radius: 12px;
+    background-color: var(--blanco);
+  }
+
+  .activitie_text {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+
+    font-size: calc(6px + 0.5vw);
+    line-height: 140%;
+
+    color: #303030;
+  }
+}

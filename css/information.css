@@ -1,0 +1,126 @@
+.info_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info_section .info_title {
+  width: 100%;
+  height: 128px;
+
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+  /* or 56px */
+
+  text-align: center;
+
+  color: #E1A142;
+}
+
+.info_section .info_data {
+  width: 100%;
+  height: 264px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  padding: 2rem;
+  margin-bottom: 4rem;
+
+  text-align: center;
+
+  color: #303030;
+}
+
+.info_frase_data {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  padding: 2rem;
+
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1em + 1vw);
+  line-height: 120%;
+
+  color: #FFFFFF;
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.mask_group {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  background: #D9D9D9;
+  -webkit-mask-image: url(../image/home/mask_group/rectangle.png);
+  mask-image: url(../image/home/mask_group/rectangle.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.mask_group .mask_image {
+  max-width: 100%;
+  width: 100%;
+  height: 1080px;
+
+  object-fit: cover;
+}
+
+/*======= Tablets =======*/
+@media (min-width: 40rem) {
+  .info_frase_data {
+    display: block;
+    justify-content: center;
+    position: absolute;
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+
+    margin: 25%;
+    text-align: left;
+    
+    font-size: calc(1em + 1vw);
+    line-height: 120%;
+    color: var(--blanco);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/*======= Desktop =======*/
+@media (min-width: 56rem) {
+  .info_frase_data {
+    display: block;
+    justify-content: center;
+    position: absolute;
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+
+    margin: 25%;
+    padding: 20px;
+    text-align: left;
+    
+    font-size: calc(1em + 1vw);
+    line-height: 120%;
+    color: var(--blanco);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+}
