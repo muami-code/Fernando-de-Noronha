@@ -30,7 +30,7 @@
 .activities {
   display: flex;
   margin-bottom: 45px;
-
+  width: 100%;
   list-style: none;
   overflow: auto;
 }
@@ -42,6 +42,8 @@
 .activities_item {
   display: grid;
   flex: 0 0 auto;
+  max-width: 100%;
+  width: 85%;
 
   max-width: 100%;
   padding: 1rem;
@@ -88,7 +90,7 @@
 /*======= Tablets ======*/
 @media (min-width: 40rem) {
   .activities_item {
-    width: 50%;
+    width: 45%;
   }
 }
 
